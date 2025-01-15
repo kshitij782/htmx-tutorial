@@ -32,6 +32,13 @@ app.get('/', (req, res) => {
     res.send(htmlTemplate())
 })
 
+app.get('/demo', async(req, res) => {
+    const responce = await fetch("https://jsonplaceholder.typicode.com/photos");
+    const data = await responce.json();
+    setTimeout(() => {
+        res.send(data)
+    }, 2000);
+})
 // app.get("/success", (req, res) => {
 //     res.send(`
 //       <!DOCTYPE html>

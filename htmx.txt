@@ -1,0 +1,5 @@
+
+1. Target - 
+
+If you want the response to be loaded into a different element other than the one that made the request,
+you can use the hx-target attribute, which takes a CSS selector.
